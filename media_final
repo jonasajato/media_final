@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Media_Final {
+    static java.util.Scanner UI = new Scanner(System.in);
+    public static void main(String[] args) {
+        // A ideia é receber 4 notas de avaliações, gerar a média do aluno e
+        //caso seja igual ou superior a 7, ele estará aprovado, caso contrário
+        //vai passar por recuperação.
+        double nota1, nota2, nota3, nota4, soma1, final1;
+        System.out.println("Bem vindo, vamos calcular as avaliacoes dos alunos!");
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite a disciplina: ");
+        String Name1 = UI.nextLine();
+        System.out.println("Digite o nome do aluno: ");
+        String Name2 = UI.nextLine();
+        System.out.println("Digite a nota da primeira avaliacao: ");
+        nota1 = entrada.nextDouble();
+        System.out.println("Digite a nota da segunda avaliacao: ");
+        nota2 = entrada.nextDouble();
+        System.out.println("Digite a nota da terceira avaliacao: ");
+        nota3 = entrada.nextDouble();
+        System.out.println("Digite a nota da quarta avaliacao: ");
+        nota4 = entrada.nextDouble();
+        soma1 = nota1 + nota2 + nota3 + nota4;
+        System.out.println("A soma de todas as notas e " + soma1);
+        final1 = soma1 / 4;
+        System.out.println("A media final do aluno " + Name2 + " na disciplina de " + Name1 + " e " + final1);
+        if(final1 >= 7){
+            System.out.println("Parabens, esta aprovado, boas festas!");
+        }else{
+            System.out.println("Esta em recuperacao!");
+        }
+
+    }
+}
